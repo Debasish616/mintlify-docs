@@ -1,55 +1,37 @@
-# Mintlify Starter Kit
+# Seismic Cards API — Documentation
 
-Use the starter kit to get your docs deployed and ready to customize.
+Source for the public docs site at **[docs.seismic.systems](https://docs.seismic.systems)**.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## What's here
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+| File | Purpose |
+|---|---|
+| [`introduction.md`](./introduction.md) | Landing page — overview, architecture, full flow, quick start. |
+| [`getting-started.md`](./getting-started.md) | Environments, OAuth flow, headers, first authenticated call. |
+| [`issuing-a-card.md`](./issuing-a-card.md) | End-to-end card creation walkthrough (sub-account → KYC → cardholder → budget → card). |
+| [`api-reference.md`](./api-reference.md) | Every endpoint with request/response examples. |
+| [`webhooks.md`](./webhooks.md) | Real-time events + HMAC-SHA256 signature verification. |
+| [`pci-widget.md`](./pci-widget.md) | Displaying PAN/CVV/expiry securely via Seismic Widget.js. |
+| [`errors.md`](./errors.md) | Full error code reference. |
+| [`mint.json`](./mint.json) | Mintlify deploy configuration. |
+| [`DEPLOY.md`](./DEPLOY.md) | Step-by-step deploy guide for Mintlify (custom domain, branding, OpenAPI). |
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
-
-## AI-assisted writing
-
-Set up your AI coding tool to work with Mintlify:
+## Local preview
 
 ```bash
-npx skills add https://mintlify.com/docs
+npm install -g mintlify
+cd cards/
+mintlify dev
 ```
 
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
+Open `http://localhost:3000`.
 
-See the [AI tools guides](/ai-tools) for tool-specific setup.
+## Deploy
 
-## Development
+See [`DEPLOY.md`](./DEPLOY.md) for the full guide. TL;DR — push to GitHub, connect at [mintlify.com/start](https://mintlify.com/start), point your CNAME, done.
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
+## Editing
 
-```
-npm i -g mint
-```
-
-Run the following command at the root of your documentation, where your `docs.json` is located:
-
-```
-mint dev
-```
-
-View your local preview at `http://localhost:3000`.
-
-## Publishing changes
-
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
-
-## Need help?
-
-### Troubleshooting
-
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+- All pages are plain Markdown. `.mdx` is supported if you need React components.
+- Internal links use absolute paths without extension: `[link text](/issuing-a-card)`.
+- After adding a page, register it in `mint.json` under `navigation`.

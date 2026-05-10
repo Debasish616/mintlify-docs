@@ -1,72 +1,53 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Seismic Cards API",
+  "description": "Issue Visa / Mastercard virtual cards. PCI-compliant card issuing platform with sub-accounts, KYC, cardholders, budgets, real-time webhooks, and a drop-in widget for displaying full card details.",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#0D0D0D",
+    "light":   "#FAFAFA",
+    "dark":    "#0D0D0D"
+  },
+  "appearance": {
+    "default": "dark"
+  },
+  "background": {
+    "color": {
+      "light": "#FFFFFF",
+      "dark":  "#0A0A0A"
+    }
   },
   "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark":  "/logo/dark.svg",
+    "href":  "https://docs.seismic.systems"
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Get started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "introduction",
+              "getting-started"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Guides",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "issuing-a-card",
+              "pci-widget",
+              "webhooks"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Reference",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/components",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "Agent ready",
-            "pages": [
-              "agent-ready/prompt",
-              "agent-ready/visibility",
-              "agent-ready/contextual",
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api-reference",
+              "errors"
             ]
           }
         ]
@@ -75,52 +56,68 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Issue your first card",
+          "href":   "/issuing-a-card",
+          "icon":   "credit-card"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Webhooks",
+          "href":   "/webhooks",
+          "icon":   "bolt"
+        },
+        {
+          "anchor": "PCI Widget",
+          "href":   "/pci-widget",
+          "icon":   "shield-check"
         }
       ]
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navbar": {
     "links": [
       {
+        "label": "Status",
+        "href":  "https://status.seismic.systems"
+      },
+      {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href":  "mailto:support@seismic.systems"
       }
     ],
     "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "type":  "button",
+      "label": "Talk to Sales",
+      "href":  "https://www.seismic.systems"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
+  },
+  "search": {
+    "prompt": "Search the Seismic Cards docs…"
+  },
+  "seo": {
+    "metatags": {
+      "og:title":       "Seismic Cards API",
+      "og:description": "Issue Visa / Mastercard virtual cards. PCI-compliant card issuing platform.",
+      "og:image":       "/logo/light.svg"
+    },
+    "indexing": "navigable"
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "website":  "https://www.seismic.systems",
+      "x":        "https://x.com/seismicsys",
+      "linkedin": "https://www.linkedin.com/company/seismicsystems"
     }
   }
 }
